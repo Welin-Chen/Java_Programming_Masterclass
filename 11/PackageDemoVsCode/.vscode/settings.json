@@ -1,0 +1,9 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "GameTestVsCode/**/*.jar",
+    "/Users/chenweilin/Desktop/java/11/Package3/out/artifacts/PackgeDemo_jar/PackgeDemo.jar"
+  ]
+}

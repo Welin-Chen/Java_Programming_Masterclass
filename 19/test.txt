@@ -1,0 +1,39 @@
+select artists.name, albums.name, songs.track, songs.title from songs
+INNER JOIN albums ON songs.album=albums._id
+INNER JOIN artists ON albums.artist=artists._id
+where artists.name LIKE "jefferson%"
+ORDER BY artists.name, albums.name, songs.track;
+
+CREATE VIEW artist_list AS
+SELECT artists.name AS artist, albums.name AS album, songs.track, songs.title FROM songs
+INNER JOIN albums ON songs.album=albums._id
+INNER JOIN artists ON albums.artist=artists._id
+ORDER BY artists.name, albums.name, songs.track;
+
+SELECT songs.title FROM songs INNER JOIN albums ON songs.album=albums._id where name="Forbidden";
+
+create view song_list as
+select albums.name, songs.title, songs.track
+from songs inner join albums on songs.album=albums._id where albums.name="Forbidden"
+ORDER BY songs.track;
+
+select artists.name, songs.title from songs
+INNER JOIN albums ON songs.album=albums._id
+INNER JOIN artists ON albums.artist=artists._id
+WHERE artists.name="Deep Purple";
+
+select artists.name, songs.title from songs
+INNER JOIN albums ON songs.album=albums._id
+INNER JOIN artists ON albums.artist=artists._id
+WHERE artists.name="Mehitabel";
+
+UPDATE artists SET name="One Kitten" WHERE artists.name="Mehitabel";
+
+select songs.title, artists.name from songs
+   ...> INNER JOIN albums ON songs.album=albums._id
+   ...> INNER JOIN artists ON albums.artist=artists._id
+   ...> WHERE artists.name="Aerosmith"
+   ...> ORDER BY songs.title;
+
+select distinct title from artist_list where artist="Aerosmith" order by title;
+select count(distinct title) from artist_list where artist="Aerosmith";

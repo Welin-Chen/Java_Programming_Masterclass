@@ -1,0 +1,13 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": {
+    "include": [
+      "lib/**/*.jar",
+      "/Users/chenweilin/Desktop/java/11/SeriesVsCode/SeriesVsCode.jar"
+    ],
+    "exclude": [
+      "/Users/chenweilin/Desktop/java/11/Series/out/artifacts/Series_jar/Series.jar"
+    ]
+  }
+}
